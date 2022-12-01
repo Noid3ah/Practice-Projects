@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Mukta:wght@200;300;400;500;600;700;800&family=Nerko+One&family=Plus+Jakarta+Sans:wght@200;400;500;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+
 *,
 *::before,
 *::after {
@@ -62,12 +64,13 @@ body {
     display: flex;
     align-items: center;
     width: 70%;
-
+    margin-bottom: 3rem;
     input[type='text'] {
       width: 80%;
       height: 50px;
       padding-left: 1rem;
       font-size: 1.8rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
     .add-btn {
@@ -81,9 +84,26 @@ body {
   }
 
   .list {
-    background-color: var(--blue-6);
+    // background-color: var(--blue-6);
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    align-self: start;
+
+    li {
+      font-size: 3rem;
+
+      &::marker {
+        color: var(--pink-8);
+      }
+    }
+
+    .not-visible {
+      display: none;
+    }
+
+    .visible {
+      display: inline-block;
+    }
   }
 }
