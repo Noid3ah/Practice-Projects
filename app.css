@@ -43,6 +43,16 @@ body {
   font-family: "Nerko One", cursive;
 }
 
+button {
+  font-size: 1rem;
+  margin-left: 1rem;
+  border: none;
+  outline: none;
+  padding: 0.2em;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
 .app {
   margin-inline: auto;
   width: min(80%, 1100px);
@@ -62,19 +72,23 @@ body {
   margin-bottom: 3rem;
 }
 .app .input-wrapper input[type=text] {
-  width: 80%;
+  width: 100%;
   height: 50px;
   padding-left: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
-.app .input-wrapper .add-btn {
-  height: 50px;
-  width: 20%;
-  outline: none;
-  border: none;
-  background-color: var(--blue-8);
-  padding: 1em;
+.app .space-out {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.app .space-out .edit-all {
+  align-self: start;
+  padding: 0.3em 2em;
+}
+.app .space-out .edit-all:hover {
+  background-color: var(--blue-7);
 }
 .app .list {
   display: flex;
@@ -93,4 +107,8 @@ body {
 }
 .app .list .visible {
   display: inline-block;
+  translate: 0px -5px;
+}
+.app .list .visible:hover {
+  background-color: var(--pink-8);
 }/*# sourceMappingURL=app.css.map */

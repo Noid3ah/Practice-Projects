@@ -1,30 +1,36 @@
 const button = document.getElementById('button');
+const input = document.getElementById('input');
+const editAll = document.querySelector('.edit-all');
+const ol = document.querySelector('.list');
+const allListBtn = ol.querySelectorAll('li button'); //?
+const deleteBtn = document.createElement('button');
 
-function getInput() {
+function getInput(e) {
   const input = document.getElementById('input');
 
-  const userInput = input.value; //?
-  renderListElement(userInput); //?
+  if (e.key === 'Enter') {
+    const userInput = input.value; //?
+    renderListElement(userInput); //?
+  }
 }
 
 function renderListElement(el) {
-  el.trim();
+  // el.trim();
   const li = document.createElement('li');
-  li.textContent = el;
+  li.textContent = el.trim().charAt(0).toUpperCase() + el.substring(1);
+  li.setAttribute('style', 'cursor:pointer;');
 
   if (!el) {
     return;
   }
 
-  // const all_Li = document.querySelectorAll(li);
-
   updateUI(li);
   renderDeleteBtn(li);
-  // deleteTask(li);
 }
 
 function updateUI(el) {
   const ol = document.querySelector('.list');
+  const all = ol.querySelectorAll('li'); //?
 
   ol.append(el);
   clearInput();
@@ -36,6 +42,7 @@ function clearInput() {
 
 function renderDeleteBtn(element) {
   const deleteBtn = document.createElement('button');
+
   deleteBtn.innerText = 'delete';
   deleteBtn.className = 'not-visible';
 
@@ -52,4 +59,5 @@ function deleteTask(listItem, btn) {
   });
 }
 
-button.addEventListener('click', getInput);
+// button.addEventListener('click', getInput);
+input.addEventListener('keypress', getInput);
