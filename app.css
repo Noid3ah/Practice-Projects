@@ -83,11 +83,11 @@ button {
   justify-content: space-between;
   width: 100%;
 }
-.app .space-out .edit-all {
+.app .space-out .delete-all {
   align-self: start;
   padding: 0.3em 2em;
 }
-.app .space-out .edit-all:hover {
+.app .space-out .delete-all:hover {
   background-color: var(--blue-7);
 }
 .app .list {
