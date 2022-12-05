@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Mukta:wght@200;300;400;500;600;700;800&family=Nerko+One&family=Plus+Jakarta+Sans:wght@200;400;500;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  // outline: 2px solid yellow;
+}
+
+html {
+  color-scheme: dark light;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  // background-color: var(--gray-0);
+  color: var(--gray-9);
+}
+
+.app {
+  flex-direction: column;
+  display: flex;
+  width: min(98%, 1100px);
+
+  .title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #eee;
+  }
+  .input {
+    height: 55px;
+    width: 100%;
+
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    margin-block-end: 1rem;
+  }
+
+  .output {
+    align-self: center;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: var(--font-weight-5);
+    color: #eee;
+  }
+}
