@@ -44,7 +44,7 @@ h6 {
 body {
   display: grid;
   place-items: center;
-  // background-color: var(--gray-0);
+  background-color: #121212;
   color: var(--gray-9);
 }
 
@@ -52,8 +52,26 @@ body {
   flex-direction: column;
   display: flex;
   width: min(98%, 1100px);
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
 
   .title {
+    font-size: 5rem;
+    color: #eee;
+    font-family: 'jakarta', sans-serif;
+    font-weight: 900;
+    align-self: center;
+
+    position: absolute;
+    top: 3rem;
+  }
+
+  .center-center {
+    margin-block: auto;
+  }
+
+  .label {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #eee;
@@ -69,6 +87,7 @@ body {
     border-radius: 0.5rem;
     outline: none;
     margin-block-end: 1rem;
+    // position: relative;
   }
 
   .output {
@@ -77,5 +96,11 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: var(--font-weight-5);
     color: #eee;
+    text-align: center;
+
+    position: absolute;
+    width: 100%;
+    margin-top: 3rem;
+    text-align: center;
   }
 }
